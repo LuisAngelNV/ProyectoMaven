@@ -19,5 +19,10 @@ public class App
         p2.saludar();
         Persona p3 = new Persona("Ana", 30); // nombre y edad
         p3.saludar();
+
+
+
+        // Ejercicio 3
+        Cliente c1 = new Cliente("Luis", 27);
     }
 }
