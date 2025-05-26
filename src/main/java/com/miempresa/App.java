@@ -24,5 +24,10 @@ public class App
 
         // Ejercicio 3
         Cliente c1 = new Cliente("Luis", 27);
+        
+        //Ejercicio 4
+        Cliente c2 = new Cliente("Luis", 27);
+        c2.setDireccion(new Direccion("Calle 1", "Ciudad 1"));
+        System.err.println(c2.toString());
     }
 }
