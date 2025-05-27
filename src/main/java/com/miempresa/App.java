@@ -13,6 +13,8 @@ import com.miempresa.Interface.Ejercicios.PowerBank;
 import com.miempresa.Interface.Example.Conectable;
 import com.miempresa.Interface.Example.Mouse;
 import com.miempresa.Interface.Example.Teclado;
+import com.miempresa.SobrecargaMetodos.examples.Calculadora;
+import com.miempresa.SobrecargaMetodos.exercises.Conversor;
 import com.miempresa.polimorfismo.Ejemplo.Auto;
 import com.miempresa.polimorfismo.Ejemplo.Bicicleta;
 import com.miempresa.polimorfismo.Ejemplo.Transporte;
@@ -128,5 +130,18 @@ public class App {
             System.out.println(); // Para dar espacio visual
         }
 
+        Calculadora calc = new Calculadora();
+
+        System.out.println(calc.sumar(2, 3));           // usa sumar(int, int)
+        System.out.println(calc.sumar(2.5, 3.7));       // usa sumar(double, double)
+        System.out.println(calc.sumar(1, 2, 3));        // usa sumar(int, int, int)
+
+
+        Conversor c = new Conversor();
+
+        System.out.println(c.convertir(1500));                        // 1.5 km
+        System.out.println(c.convertir(180, "radianes"));             // 3.14...
+        System.out.println(c.convertir(100, "fahrenheit"));           // 212.0
+        System.out.println(c.convertir("hola mundo"));                // HOLA MUNDO
     }
 }
