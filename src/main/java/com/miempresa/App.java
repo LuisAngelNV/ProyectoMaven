@@ -2,6 +2,10 @@ package com.miempresa;
 
 import com.miempresa.AbstractClass.Example.Motocicleta;
 import com.miempresa.AbstractClass.Example.Vehiculo;
+import com.miempresa.AbstractClass.exercises.Destornillador;
+import com.miempresa.AbstractClass.exercises.Herramienta;
+import com.miempresa.AbstractClass.exercises.Martillo;
+import com.miempresa.AbstractClass.exercises.Taladro;
 import com.miempresa.Interface.Ejercicios.Cargable;
 import com.miempresa.Interface.Ejercicios.Celular;
 import com.miempresa.Interface.Ejercicios.Laptop;
@@ -105,5 +109,24 @@ public class App {
                 System.out.println("Esta es una motocicleta.");
             }
         }
+
+        System.out.println("__________AbtrsactClass-Exercises");
+        List<Herramienta> HerraminetasList = new ArrayList<Herramienta>(){{
+            add(new Taladro("Taladro eléctrico"));
+            add(new Martillo("Martillo de carpintero"));
+            add(new Destornillador("Destornillador Phillips"));
+
+        }};
+
+        for (Herramienta her : HerraminetasList) {
+            her.activar();
+
+            if (her instanceof Taladro) {
+                System.out.println("Esta herramienta es eléctrica");
+            }
+            her.usar();
+            System.out.println(); // Para dar espacio visual
+        }
+
     }
 }
